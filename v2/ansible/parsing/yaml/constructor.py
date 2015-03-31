@@ -52,6 +52,12 @@ class AnsibleConstructor(Constructor):
 
         return ret
 
+    def construct_yaml_str(self, node):
+        # Override the default string handling function
+        # to always return unicode objects
+        # Adapted from: http://stackoverflow.com/questions/2890146/how-to-force-pyyaml-to-load-strings-as-unicode-objects
+        return self.construct_scalar(node)
+
 AnsibleConstructor.add_constructor(
     u'tag:yaml.org,2002:map',
     AnsibleConstructor.construct_yaml_map)
@@ -59,4 +65,8 @@ AnsibleConstructor.add_constructor(
 AnsibleConstructor.add_constructor(
     u'tag:yaml.org,2002:python/dict',
     AnsibleConstructor.construct_yaml_map)
+
+AnsibleConstructor.add_constructor(
+    u'tag:yaml.org,2002:str',
+    AnsibleConstructor.construct_yaml_str)
 
