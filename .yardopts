@@ -1,0 +1,17 @@
+--protected
+--private
+--verbose
+--markup markdown
+--readme README.md
+--tag status
+--transitive-tag status
+--tag comment
+--hide-tag comment
+--tag dsl:"DSL"
+--no-transitive-tag api
+--template-path yardoc/templates
+--files CO*.md,api/**/*.md
+--api public
+--api private
+--hide-void-return
+lib/**/*.rb
