@@ -5,13 +5,13 @@ Ensible
 
 
 
-We all love Ansible, but it's so US focussed,  Therefore it is time to fork Ansible 
-The European Ansible community is big enough by itselve.
+We all love Ansible, but it's so US focussed. Therefore it is time to fork Ansible.
+The European Ansible community is big enough by itself.
 
-I`m happy too announc "Ensible,  European Ansible" 
+I'm happy to announce "Ensible, European Ansible"
 
 
-By forking the project we can also get some funding from the European commission and claim we did all the work 
+By forking the project we can also get some funding from the European commission and claim we did all the work
 on this project.
 
 Ensible is a radically simple IT automation system.  It handles configuration-management, application deployment, cloud provisioning, ad-hoc task-execution, and multinode orchestration - including trivializing things like zero downtime rolling updates with load balancers.
