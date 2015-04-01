@@ -53,7 +53,7 @@ Get Involved
 Branch Info
 ===========
 
-   * Releases are named after Van Halen songs.
+   * Releases are named after Journey songs.
    * The devel branch corresponds to the release actively under development.
    * As of 1.8, modules are kept in different repos, you'll want to follow [core](https://github.com/ensible/ensible-modules-core) and [extras](https://github.com/ensible/ensible-modules-extras)
    * Various release-X.Y branches exist for previous releases.
