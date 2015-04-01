@@ -1,11 +1,25 @@
+language: ruby
 sudo: false
-language: python
-env:
-  - TOXENV=py26
-  - TOXENV=py27
-install:
-  - pip install tox
+bundler_args: --without development
 script:
-  - tox
-after_success:
-  - coveralls
+  - "bundle exec rake $CHECK"
+notifications:
+  email: false
+rvm:
+  - 2.2.0
+  - 2.1.5
+  - 2.0.0
+  - 1.9.3
+
+env:
+  - "CHECK=parallel:spec\\[2\\]"
+  - "CHECK=rubocop"
+
+matrix:
+  exclude:
+    - rvm: 2.2.0
+      env: "CHECK=rubocop"
+    - rvm: 2.0.0
+      env: "CHECK=rubocop"
+    - rvm: 1.9.3
+      env: "CHECK=rubocop"
